@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:id="@+id/meeting_subject"
+        android:hint="Subject"
+        android:fontFamily="@font/avnxt_regular"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/layout_rounded_gradient"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="200dp"
+        android:textSize="20dp"
+        android:layout_below="@id/meeting_subject"
+        android:id="@+id/meeting_desc"
+        android:fontFamily="@font/avnxt_regular"
+        android:hint="No Description"
+        android:inputType="none"
+        android:gravity="start"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/layout_rounded_gradient"
+
+        />
+
+</RelativeLayout>

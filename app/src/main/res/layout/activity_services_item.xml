@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:id="@+id/rel_service"
+    tools:context=".Services.ServicesItem">
+
+    <RelativeLayout
+        android:id="@+id/services_text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:paddingVertical="5dp">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="5dp"
+            android:clickable="true"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:id="@+id/service_title"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/avnxt_medium"
+            android:text="Housekeepers"
+            android:textColor="#000000"
+            android:textSize="27dp" />
+
+        <TextView
+            android:id="@+id/add_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:fontFamily="@font/avnxt_medium"
+            android:textColor="@color/gDark"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/view1"
+        android:layout_below="@id/services_text1"
+        android:background="#85000000" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view1"
+        android:layout_marginTop="10dp"
+        android:id="@+id/recycler_view_services"
+        android:layout_marginHorizontal="10dp"/>
+
+
+</RelativeLayout>

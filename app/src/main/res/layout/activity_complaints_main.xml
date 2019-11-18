@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+
+    tools:openDrawer="start" >
+
+    <!-- A RecyclerView with some commonly used attributes -->
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:clickable="true"
+
+    android:background="#FFFFFF">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:id="@+id/topbar">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:src= "@drawable/ham_icon"
+            android:id="@+id/ham_out"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_centerInParent="true">
+            <TextView
+                android:id="@+id/society_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/avnxt_demi"
+                android:text="Neumec Heights"
+                android:textColor="@color/gDark"
+                android:textSize="22dp" />
+
+            <TextView
+                android:id="@+id/flat_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/avnxt_medium"
+                android:text="B - 303"
+                android:textColor="#000000"
+                android:textSize="19dp" />
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:id="@+id/user_profile"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src= "@drawable/user_home"
+            android:layout_marginEnd="10dp" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/topbar"
+        android:layout_margin="7dp"
+        android:background="#CC000000" />
+
+
+
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_add_mom"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="18dp"
+        android:layout_below="@id/topbar"
+        android:id="@+id/generate_img"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_filter"
+        android:layout_marginEnd="70dp"
+        android:layout_marginTop="18dp"
+        android:layout_below="@id/topbar"
+        android:id="@+id/filter_icon"/>
+
+    <LinearLayout
+        android:id="@+id/complaints"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:layout_below="@id/topbar"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:id="@+id/back"
+
+            android:paddingHorizontal="3dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="3.5"
+            android:text="Complaints"
+            android:textColor="@color/gDark"
+            android:fontFamily="@font/avnxt_medium"
+            android:textSize="27dp" />
+
+
+    </LinearLayout>
+    <!--<SearchView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/complaints"-->
+        <!--android:id="@+id/search_field"-->
+        <!--android:background="@drawable/edittext_borders"-->
+        <!--android:layout_marginHorizontal="8dp">-->
+
+    <!--</SearchView>-->
+
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/complaints"
+        android:layout_margin="7dp"
+        android:background="#70000000"
+        android:id="@+id/view1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_rel"
+        android:orientation="horizontal"
+        android:layout_below="@id/view1"
+        android:paddingVertical="5dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/edittext_borders_lighter">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center_vertical"
+            android:padding="4dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search Complaints"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:layout_gravity="center_vertical"
+            android:selectAllOnFocus="true"
+            android:textSize="20dp"
+            android:background="@null"
+            android:padding="5dp"
+            android:fontFamily="@font/avnxt_medium"
+            android:layout_marginHorizontal="8dp"
+            android:id="@+id/search_field"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_rel"
+        android:layout_marginTop="5dp"
+        android:scrollbars="vertical" />
+
+
+
+
+</RelativeLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:background="#FFFFFF"
+
+        app:menu="@menu/activity_home_drawer" />
+
+
+</android.support.v4.widget.DrawerLayout>

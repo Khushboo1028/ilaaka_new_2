@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view"
+    android:background="#FFFFFF">
+
+    <group android:checkableBehavior="single"/>
+
+        <item
+            android:id="@+id/home_menu"
+
+            app:actionLayout="@layout/ham_home"
+            app:showAsAction="always"
+            tools:ignore="MenuTitle" />
+
+        <item
+            android:id="@+id/messages_menu"
+            app:actionLayout="@layout/ham_messages"
+            app:showAsAction="always"
+            tools:ignore="MenuTitle" />
+        <item
+            android:id="@+id/complaints_menu"
+            app:actionLayout="@layout/ham_complaints"
+            app:showAsAction="always"
+            tools:ignore="MenuTitle" />
+
+
+
+<!--        <item-->
+<!--            android:id="@+id/payments_menu"-->
+<!--            app:actionLayout="@layout/ham_payments"-->
+<!--            app:showAsAction="always"-->
+<!--            tools:ignore="MenuTitle" />-->
+    <item
+        android:id="@+id/accounting_menu"
+        app:actionLayout="@layout/ham_mmt"
+        app:showAsAction="always"
+        tools:ignore="MenuTitle" />
+
+        <item
+            android:id="@+id/services_menu"
+            app:actionLayout="@layout/ham_services"
+            app:showAsAction="always"
+            tools:ignore="MenuTitle" />
+
+        <item
+            android:id="@+id/nearby_menu"
+            app:actionLayout="@layout/ham_nearby"
+            app:showAsAction="always"
+            tools:ignore="MenuTitle" />
+
+        <item
+            android:id="@+id/settings_menu"
+            app:actionLayout="@layout/ham_settings"
+            app:showAsAction="always"
+            tools:ignore="MenuTitle" />
+
+        <item
+            android:id="@+id/emergency_menu"
+            app:actionLayout="@layout/ham_emergency"
+            app:showAsAction="always"
+            tools:ignore="MenuTitle" />
+
+
+</menu>

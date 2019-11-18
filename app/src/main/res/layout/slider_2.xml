@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_grad_borders"
+    android:gravity="center">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/slider_2"
+        android:layout_marginVertical="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Easily keep track of your Meetings and what's happening in your society."
+        android:textSize="25dp"
+        android:textColor="@color/white"
+        android:layout_marginHorizontal="20dp"
+        android:gravity="center"
+        android:fontFamily="@font/avnxt_demi"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ever wished of an easy way of keeping track of Minutes of Meetings, Complaints, Notices? We have the solution."
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="30dp"
+        android:gravity="center"
+        android:fontFamily="@font/avnxt_demi"/>
+
+</LinearLayout>

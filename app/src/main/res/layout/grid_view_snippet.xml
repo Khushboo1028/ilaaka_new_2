@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="12dp"
+    android:background="@drawable/round_pay_grid"
+
+    >
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:scaleType="centerInside"
+        android:id="@+id/icons"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/elec_bill_home"
+        android:layout_gravity="center"
+
+        />
+
+    <TextView
+        android:id="@+id/icon_names"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/icons"
+        android:fontFamily="@font/avnxt_medium"
+        android:textColor="@color/gDark"
+        android:layout_marginTop="5dp"
+        android:lines="2"
+        app:autoSizeTextType="none"
+        android:textSize="16dp"
+        android:text="Electric Bill"
+        android:gravity="center" />
+
+</RelativeLayout>

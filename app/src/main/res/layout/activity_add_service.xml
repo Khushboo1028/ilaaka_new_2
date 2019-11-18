@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:isScrollContainer="true"
+    android:background="@color/white"
+    tools:context=".Services.AddService">
+
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:isScrollContainer="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:background="@color/white"
+            android:id="@+id/mainrel">
+
+    <RelativeLayout
+        android:id="@+id/services_text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:paddingVertical="5dp">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="5dp"
+            android:clickable="true"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:id="@+id/service_title"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/avnxt_medium"
+            android:text="Housekeepers"
+            android:textColor="#000000"
+            android:textSize="27dp" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/view1"
+        android:layout_below="@id/services_text1"
+        android:background="#85000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/profile_server"
+
+        android:layout_below="@id/view1">
+
+
+    <!--<ImageView-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="150dp"-->
+        <!--android:padding="10dp"-->
+        <!--android:layout_below="@id/settings_text"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:src="@drawable/ic_service_default"-->
+        <!--android:background="@drawable/circle"-->
+        <!--android:id="@+id/service_provider_img"/>-->
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:id="@+id/service_provider_img"
+            android:src="@drawable/ic_service_default"
+            android:background="@drawable/circle" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal"
+            android:id="@+id/service_1">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingVertical="10dp"
+                android:maxLines="1"
+                android:paddingEnd="20dp"
+                android:inputType="textCapSentences|textAutoCorrect"
+                android:background="@drawable/edittext_borders"
+                android:id="@+id/service_provider_name"
+                android:layout_marginHorizontal="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avnxt_medium"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_marginTop="3dp"
+                android:paddingRight="5dp"
+                android:paddingVertical="10dp"
+                android:layout_alignParentRight="true"
+                android:text="Name"
+                android:layout_marginRight="33dp"
+                android:layout_gravity="center"
+                android:textColor="@color/gDark"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:id="@+id/service_2">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingVertical="10dp"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:imeOptions="actionDone"
+                android:background="@drawable/edittext_borders"
+                android:id="@+id/contact_number"
+                android:inputType="phone"
+                android:layout_marginHorizontal="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avnxt_medium"
+                android:gravity="center"
+                android:layout_marginTop="3dp"
+                android:paddingVertical="10dp"
+                android:layout_alignParentRight="true"
+                android:text="Contact"
+                android:layout_marginHorizontal="40dp"
+                android:layout_gravity="center"
+                android:textColor="@color/gDark"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:id="@+id/service_3">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingVertical="10dp"
+                android:maxLength="12"
+                android:maxLines="1"
+                android:imeOptions="actionDone"
+                android:background="@drawable/edittext_borders"
+                android:id="@+id/aadhar_number"
+                android:inputType="textCapSentences|textAutoCorrect|number"
+                android:layout_marginHorizontal="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avnxt_medium"
+                android:gravity="center"
+                android:id="@+id/aadhar_text"
+                android:layout_marginTop="3dp"
+                android:paddingVertical="10dp"
+                android:layout_alignParentRight="true"
+                android:text="Aadhar"
+                android:layout_marginHorizontal="40dp"
+                android:layout_gravity="center"
+                android:textColor="@color/gDark"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/avnxt_demi"
+        android:layout_below="@id/profile_server"
+        android:text="ADD Service"
+        android:id="@+id/btn_add_service"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/btn_grad_borders"
+        android:layout_marginHorizontal="40dp"
+        />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar"
+        android:indeterminateTint="@color/gDark"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
+

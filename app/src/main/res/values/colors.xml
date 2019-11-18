@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#00B894</color>-->
+    <!--<color name="colorPrimaryDark">#00574B</color>-->
+    <!--<color name="colorAccent">#00B894</color>-->
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!--<color name="gDark">#00B894</color>-->
+    <!--<color name="gLight">#55EFC4</color>-->
+
+    <color name="actionMenuTextColor">#000000</color>
+    <color name="colorAppBackground">#F9F9F9</color>
+    <color name="incorrect_red">#E74C3C</color>
+
+
+
+
+    <!--new theme-->
+    <color name="colorPrimary">#6f1E51</color>
+    <color name="colorPrimaryDark">#6f1E51</color>
+    <color name="colorAccent">#6f1E51</color>
+
+    <color name="gDark">#6f1E51</color>
+    <color name="gLight">#6f1E51</color>
+    <color name="darkGrey">#434343</color>
+    <color name="lightGrey">#777777</color>
+
+    <color name="chatBubble">#CC6f1E51</color>
+    <color name="greenSolved">#137E00</color>
+    <color name="pendingYellow">#FEBC00</color>
+
+</resources>

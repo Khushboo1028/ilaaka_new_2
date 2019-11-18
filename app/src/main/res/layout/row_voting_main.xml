@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/row"
+    android:paddingTop="5dp"
+    android:background="?android:attr/selectableItemBackground"
+    >
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:text="Poll Question Here"
+        android:layout_marginTop="10dp"
+        android:lines="2"
+        android:layout_toLeftOf="@id/time_created"
+        android:layout_alignParentStart="true"
+        android:ellipsize="end"
+        android:layout_marginHorizontal="10dp"
+        android:fontFamily="@font/avnxt_demi"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:id="@+id/poll_question"/>
+
+
+
+
+    <TextView
+        android:id="@+id/poll_ends_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/poll_question"
+        android:singleLine="false"
+        android:text="Poll Ends: "
+        android:textColor="#9E22313f"
+        android:paddingLeft="5dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/avnxt_regular"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:textSize="15dp" />
+
+
+
+    <TextView
+        android:id="@+id/poll_end_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/poll_question"
+        android:layout_toRightOf="@id/poll_ends_text"
+        android:maxLines="2"
+        android:singleLine="false"
+        android:text="06:30 pm"
+        android:textColor="#9E22313f"
+
+        android:ellipsize="end"
+        android:fontFamily="@font/avnxt_regular"
+        android:layout_marginTop="5dp"
+        android:textSize="15dp" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginRight="6dp"
+        android:id="@+id/date_layout"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AUG"
+            android:textSize="15dp"
+            android:fontFamily="@font/avnxt_bold"
+            android:textColor="#000000"
+            android:layout_alignParentRight="true"
+            android:id="@+id/month"
+            android:layout_above="@+id/date"
+            />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:gravity="center_horizontal"
+            android:textSize="18dp"
+            android:textColor="#000000"
+            android:fontFamily="@font/avnxt_bold"
+            android:layout_alignParentRight="true"
+            />
+
+
+        <TextView
+            android:id="@+id/year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018"
+            android:textSize="15dp"
+            android:fontFamily="@font/avnxt_bold"
+            android:textColor="#000000"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/date" />
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12:59 PM"
+        android:id="@+id/time_created"
+        android:fontFamily="@font/avnxt_regular"
+        android:textSize="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_alignBaseline="@id/poll_question"
+        android:layout_toLeftOf="@id/date_layout" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/poll_end_time"
+        android:layout_margin="7dp"
+        android:layout_marginTop="15dp"
+        android:background="#20000000"
+        android:id="@+id/view1" />
+
+</RelativeLayout>

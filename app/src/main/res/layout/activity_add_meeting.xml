@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:id="@+id/relativeLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:id="@+id/generateMeetingsToolbar">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:padding="3dp"
+            android:layout_gravity="start|center_vertical"
+            android:src="@drawable/back"
+            android:id="@+id/back"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/service_title"
+           android:layout_gravity="center"
+            android:fontFamily="@font/avnxt_medium"
+            android:text="Minutes Of Meetings"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:id="@+id/generate"
+            android:text="Save"
+            android:fontFamily="@font/avnxt_demi"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="20dp"
+            android:textSize="18dp"
+            android:textColor="@color/gDark"
+            />
+
+
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_lay"
+
+        android:layout_below="@id/generateMeetingsToolbar"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Meeting Agenda"
+            android:fontFamily="@font/avnxt_demi"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:background="@null"
+            android:id="@+id/meeting_name"
+            android:layout_weight="90"
+            android:layout_marginHorizontal="10dp"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_add_mom"
+            android:id="@+id/new_subject"
+            android:layout_weight="1"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/progressBar"
+        android:backgroundTint="@color/gDark"
+        android:layout_centerInParent="true"/>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/add_lay"
+        android:background="#CEC9C9"
+        android:layout_margin="7dp"
+        android:id="@+id/view1"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/view1">
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/meeting_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        app:reverseLayout="true"
+        android:scrollbars="vertical"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/linearLayout"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/meeting_recycler_view"
+        android:layout_marginHorizontal="10dp"
+        >
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_add_attachments"
+            android:baselineAlignBottom="true"
+            android:id="@+id/add"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:id="@+id/recycler_view_images"
+            android:padding="5dp"
+            app:reverseLayout="true"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+
+
+            >
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Messaging.Fragments.ChatsFragment">
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/search_rel"
+       android:orientation="horizontal"
+       android:layout_marginTop="10dp"
+       android:paddingVertical="5dp"
+       android:layout_marginHorizontal="10dp"
+       android:background="@drawable/edittext_borders_lighter">
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_search"
+          android:layout_marginStart="5dp"
+          android:layout_gravity="center_vertical"
+          android:padding="4dp" />
+
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Search Name or Flat No."
+          android:imeOptions="actionDone"
+          android:singleLine="true"
+          android:layout_gravity="center_vertical"
+          android:selectAllOnFocus="true"
+          android:textSize="20dp"
+          android:background="@null"
+          android:padding="5dp"
+          android:fontFamily="@font/avnxt_medium"
+          android:layout_marginHorizontal="8dp"
+          android:id="@+id/search_field"
+          />
+
+
+   </LinearLayout>
+
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/group_message_rel"
+       android:layout_below="@id/search_rel"
+       android:layout_marginTop="10dp"
+       android:layout_marginHorizontal="10dp"
+       >
+
+      <de.hdodenhof.circleimageview.CircleImageView
+          android:layout_width="60dp"
+          android:layout_height="60dp"
+          android:id="@+id/profile_image"
+          android:src="@drawable/ic_group_messaging"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Group Name"
+          android:id="@+id/groupname"
+          android:fontFamily="@font/avnxt_medium"
+          android:layout_toRightOf="@id/profile_image"
+          android:layout_toEndOf="@id/profile_image"
+          android:layout_marginLeft="10dp"
+          android:textColor="@color/black"
+          android:textSize="18dp"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/last_message_date"
+          android:text="26/06/19"
+          android:fontFamily="@font/avnxt_regular"
+          android:layout_marginHorizontal="10dp"
+          android:layout_alignParentEnd="true"
+          android:maxLines="1"/>
+
+      <de.hdodenhof.circleimageview.CircleImageView
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          app:civ_border_width="10dp"
+          app:civ_border_color="#05df29"
+          android:id="@+id/img_on"
+          android:visibility="gone"
+          android:src="@mipmap/ic_launcher"
+          android:layout_below="@id/groupname"
+          android:layout_marginTop="10dp"
+          android:layout_marginLeft="-15dp"
+          android:layout_toRightOf="@id/profile_image"
+          android:layout_toEndOf="@id/profile_image"/>
+
+
+      <de.hdodenhof.circleimageview.CircleImageView
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          app:civ_border_width="10dp"
+          app:civ_border_color="#e93f18"
+          android:id="@+id/img_off"
+          android:visibility="gone"
+          android:src="@drawable/ic_service_default"
+          android:layout_below="@id/groupname"
+          android:layout_marginTop="10dp"
+          android:layout_marginLeft="-15dp"
+          android:layout_toRightOf="@id/profile_image"
+          android:layout_toEndOf="@id/profile_image"/>
+
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignRight="@id/groupname"
+          android:id="@+id/text_unread"
+          android:textSize="15dp"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/groupname"
+          android:layout_toRightOf="@id/profile_image"
+          android:id="@+id/last_message"
+          android:text=""
+          android:layout_toLeftOf="@id/last_message_time"
+          android:fontFamily="@font/avnxt_regular"
+          android:layout_marginStart="10dp"
+          android:layout_marginTop="16dp"
+          android:layout_marginEnd="20dp"
+          android:ellipsize="end"
+          android:maxLines="1"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/groupname"
+          android:id="@+id/last_message_time"
+          android:text="18:04"
+          android:fontFamily="@font/avnxt_regular"
+          android:layout_marginEnd="10dp"
+          android:layout_alignParentEnd="true"
+          android:layout_marginTop="20dp"
+          android:maxLines="1"/>
+
+      <View
+          android:layout_width="10dp"
+          android:layout_height="10dp"
+          android:background="@drawable/circle_unread"
+          android:visibility="gone"
+          android:layout_alignParentEnd="true"
+          android:layout_marginEnd="16dp"
+          android:id="@+id/read_indicator"
+          android:layout_centerVertical="true"
+          />
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:layout_marginHorizontal="7dp"
+          android:layout_marginTop="10dp"
+          android:layout_below="@id/last_message"
+          android:background="#1A000000"
+         />
+
+
+
+
+</RelativeLayout>
+
+   <android.support.v7.widget.RecyclerView
+       android:layout_width="match_parent"
+       android:id="@+id/recycler_view"
+       android:layout_marginTop="4dp"
+       android:layout_below="@id/group_message_rel"
+       android:layout_height="match_parent">
+
+   </android.support.v7.widget.RecyclerView>
+   <ProgressBar
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_centerInParent="true"
+       android:id="@+id/progress_bar"/>
+
+</RelativeLayout>

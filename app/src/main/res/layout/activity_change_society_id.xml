@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/scrollview"
+    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:fillViewport="true"
+    android:isScrollContainer="true">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Login.SocIdFragment">
+
+
+        <RelativeLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:paddingVertical="5dp">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:id="@+id/service_title"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/avnxt_medium"
+                android:text="Change Society"
+                android:textColor="#000000"
+                android:textSize="27dp" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_below="@+id/top_layout"
+            android:text="Please Enter A Society ID"
+            android:fontFamily="@font/avnxt_medium"
+            android:textColor="#CC000000"
+            android:textSize="20dp"
+            android:id="@+id/soc_id_text"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/soc_id_text"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="15dp"
+            android:text="Society ID is a pre - generated XX alpha-numeric ID. It is given to you by
+Replon Technologies."
+            android:fontFamily="@font/avnxt_medium"
+            android:textColor="#CC000000"
+            android:textSize="14dp"
+            android:id="@+id/soc_id_note"/>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/soc_id_note"
+            android:orientation="horizontal"
+            android:id="@+id/soc_id_rel">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingVertical="10dp"
+                android:fontFamily="@font/avnxt_regular"
+                android:inputType="textEmailAddress"
+                android:maxLength="40"
+                android:background="@drawable/edittext_borders"
+                android:id="@+id/soc_id"
+                android:layout_marginHorizontal="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avnxt_medium"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_marginTop="3dp"
+                android:paddingVertical="10dp"
+                android:layout_alignParentRight="true"
+                android:text="Society ID"
+                android:layout_marginHorizontal="40dp"
+                android:layout_gravity="center"
+                android:textColor="@color/gDark"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/soc_id_rel"
+            android:id="@+id/enter_flatno_rel">
+
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingVertical="10dp"
+                android:layout_marginHorizontal="30dp"
+                android:background="@drawable/edittext_borders" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avnxt_medium"
+                android:gravity="center"
+                android:background="#FFFFFF"
+                android:layout_marginTop="3dp"
+                android:paddingVertical="10dp"
+                android:layout_toLeftOf="@id/img_flat"
+                android:text="▼"
+                android:layout_marginHorizontal="40dp"
+                android:layout_gravity="center"
+                android:textColor="@color/gLight"
+                android:textSize="12dp" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/enter_flatno"
+                android:layout_gravity="center"
+                android:id="@+id/img_flat"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="45dp"
+                android:gravity="center"/>
+        </RelativeLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:fontFamily="@font/avnxt_demi"
+            android:text="Confirm"
+            android:layout_below="@id/soc_id_rel"
+            android:layout_marginTop="200dp"
+            android:id="@+id/btn_confirm"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_grad_borders"
+            android:layout_marginHorizontal="40dp"
+            />
+
+
+
+
+
+        <ProgressBar
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/progressBar"
+            android:indeterminateTint="@color/gDark"/>
+
+
+    </RelativeLayout>
+</ScrollView>

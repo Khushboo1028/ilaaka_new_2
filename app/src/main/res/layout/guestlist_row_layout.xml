@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:id="@+id/row">
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="100dp"
+        android:orientation="vertical"
+        android:id="@+id/guest_list">
+
+        <TextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/guest_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name Here"
+            android:fontFamily="@font/avnxt_medium"
+            android:textSize="18dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/gDark"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="15dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Purpose: "
+                android:textSize="15dp"
+                android:fontFamily="@font/avnxt_medium"
+                android:textColor="#3B3B98"
+                />
+
+
+
+            <TextView
+                android:id="@+id/guest_purpose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meeting"
+                android:textSize="15dp"
+                android:fontFamily="@font/avnxt_regular"
+                android:textColor="#000000"
+                />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/guestlist"
+            android:layout_marginStart="15dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In Time: "
+                android:textSize="15dp"
+                android:fontFamily="@font/avnxt_medium"
+                android:textColor="#3B3B98"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time and Date"
+                android:id="@+id/dateAndTime"
+                android:textSize="15dp"
+                android:fontFamily="@font/avnxt_regular"
+                android:textColor="#000000"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="15dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Out Time: "
+                android:textSize="15dp"
+                android:fontFamily="@font/avnxt_medium"
+                android:textColor="#3B3B98"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time and Date"
+                android:id="@+id/dateAndTime_out"
+                android:textSize="15dp"
+                android:fontFamily="@font/avnxt_regular"
+                android:textColor="#000000"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checked-in"
+        android:fontFamily="@font/avnxt_medium"
+        android:textSize="16dp"
+        android:id="@+id/checkedin_text"
+        android:visibility="gone"
+        android:layout_marginTop="12dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="30dp"
+        android:textColor="#E0313F"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_home_checkout"
+        android:id="@+id/checkedin_image"
+        android:visibility="gone"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="40dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="7dp"
+        android:background="#5D707070"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/guest_list"/>
+
+
+
+</RelativeLayout>

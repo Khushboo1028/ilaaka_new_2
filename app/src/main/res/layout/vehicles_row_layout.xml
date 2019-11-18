@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainrel"
+    android:background="@drawable/rounded_corners_yellow"
+    android:layout_marginVertical="10dp"
+    android:layout_marginHorizontal="20dp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:id="@+id/veh_img"
+        android:src="@drawable/show_vehicle_guest"
+        android:background="@drawable/circle" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/veh_img"
+        android:layout_marginTop="20dp"
+        android:id="@+id/veh_num_rel">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gDark"
+        android:text="Vehicle Number: "
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/avnxt_demi"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="MH 02 KG 6969"
+            android:layout_marginStart="2dp"
+            android:id="@+id/veh_num"
+            android:fontFamily="@font/avnxt_demi"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/veh_num_rel"
+        android:layout_marginTop="6dp"
+        android:id="@+id/veh_type_rel">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gDark"
+            android:text="Vehicle Type: "
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/avnxt_demi"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="4 - Wheeler"
+            android:layout_marginStart="2dp"
+            android:id="@+id/veh_type"
+            android:fontFamily="@font/avnxt_demi"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/veh_type_rel"
+        android:layout_marginTop="6dp"
+        android:id="@+id/parking_slot_rel">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gDark"
+            android:text="Parking Slot: "
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/avnxt_demi"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="S69"
+            android:layout_marginStart="2dp"
+            android:id="@+id/park_slot"
+            android:fontFamily="@font/avnxt_demi"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/parking_slot_rel"
+        android:layout_marginTop="6dp"
+        android:id="@+id/veh_color_rel"
+        android:layout_marginBottom="16dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gDark"
+            android:text="Vehicle Color: "
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/avnxt_demi"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Greenish Yellow"
+            android:layout_marginStart="2dp"
+            android:id="@+id/veh_color"
+            android:fontFamily="@font/avnxt_demi"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

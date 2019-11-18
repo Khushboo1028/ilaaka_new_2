@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:isScrollContainer="true"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:isScrollContainer="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:background="@color/white"
+            android:id="@+id/mainrel">
+
+            <RelativeLayout
+                android:id="@+id/services_text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:paddingVertical="5dp">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingHorizontal="5dp"
+                    android:clickable="true"
+                    android:src="@drawable/back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/title"
+                    android:fontFamily="@font/avnxt_medium"
+                    android:layout_below="@id/back"
+                    android:paddingHorizontal="5dp"
+                    android:text="Record a Transaction"
+                    android:textColor="@color/gDark"
+                    android:textSize="24dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/save"
+                    android:fontFamily="@font/avnxt_medium"
+                    android:layout_below="@id/back"
+                    android:text="Save"
+                    android:paddingHorizontal="5dp"
+                   android:layout_alignParentEnd="true"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/view1"
+                android:layout_below="@id/services_text1"
+                android:background="#85000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/profile_server"
+
+                android:layout_below="@id/view1">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/service_1">
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingVertical="10dp"
+                        android:maxLines="1"
+                        android:paddingEnd="20dp"
+                        android:inputType="textCapSentences|textAutoCorrect"
+                        android:background="@drawable/edittext_borders"
+                        android:id="@+id/particular"
+                        android:layout_marginHorizontal="30dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/avnxt_medium"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:layout_marginTop="3dp"
+                        android:paddingRight="5dp"
+                        android:paddingVertical="10dp"
+                        android:layout_alignParentRight="true"
+                        android:text="Particulars"
+                        android:layout_marginRight="33dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/gDark"
+                        android:textSize="12dp" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/service_2">
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingVertical="10dp"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:imeOptions="actionDone"
+                        android:background="@drawable/edittext_borders"
+                        android:id="@+id/amount"
+                        android:inputType="phone"
+                        android:layout_marginHorizontal="30dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/avnxt_medium"
+                        android:gravity="center"
+                        android:layout_marginTop="3dp"
+                        android:paddingVertical="10dp"
+                        android:layout_alignParentRight="true"
+                        android:text="₹ Amount"
+                        android:layout_marginHorizontal="40dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/gDark"
+                        android:textSize="12dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/service_2"
+                    android:id="@+id/enter_paidby_rel">
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingVertical="10dp"
+                        android:layout_marginHorizontal="30dp"
+                        android:background="@drawable/edittext_borders" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/avnxt_medium"
+                        android:gravity="center"
+                        android:background="#FFFFFF"
+                        android:layout_marginTop="3dp"
+                        android:paddingVertical="10dp"
+                        android:layout_toLeftOf="@id/paid_by"
+                        android:text="▼"
+                        android:layout_marginHorizontal="40dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/gLight"
+                        android:textSize="12dp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/enter_flatno"
+                        android:layout_gravity="center"
+                        android:id="@+id/paid_by"
+                        android:text="Paid by"
+                        android:fontFamily="@font/avnxt_medium"
+                        android:textColor="@color/gDark"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="12dp"
+                        android:textSize="12dp"
+                        android:layout_marginRight="45dp"
+                        android:gravity="center"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/service_3">
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingVertical="10dp"
+                        android:maxLength="12"
+                        android:maxLines="1"
+                        android:imeOptions="actionDone"
+                        android:background="@drawable/edittext_borders"
+                        android:id="@+id/reference_no"
+                        android:inputType="phone"
+                        android:layout_marginHorizontal="30dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/avnxt_medium"
+                        android:gravity="center"
+                        android:id="@+id/reference_no_text"
+                        android:layout_marginTop="3dp"
+                        android:paddingVertical="10dp"
+                        android:layout_alignParentRight="true"
+                        android:text="Reference No."
+                        android:layout_marginHorizontal="40dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/gDark"
+                        android:textSize="12dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/date_layout_rel">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingVertical="10dp"
+                        android:maxLength="12"
+                        android:maxLines="1"
+                        android:imeOptions="actionDone"
+                        android:background="@drawable/edittext_borders"
+                        android:id="@+id/tv_date"
+                        android:text="Select Date"
+                        android:textColor="@color/black"
+                        android:inputType="textCapSentences|textAutoCorrect|number"
+                        android:layout_marginHorizontal="30dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/avnxt_medium"
+                        android:gravity="center"
+                        android:id="@+id/date"
+                        android:layout_marginTop="3dp"
+                        android:paddingVertical="10dp"
+                        android:layout_alignParentRight="true"
+                        android:text="Date"
+                        android:layout_marginHorizontal="40dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/gDark"
+                        android:textSize="12dp" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:id="@+id/progressBar"
+                android:indeterminateTint="@color/gDark"/>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/linearLayout"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/profile_server"
+        android:layout_marginHorizontal="10dp"
+
+        >
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_add_attachments"
+            android:baselineAlignBottom="true"
+            android:id="@+id/add"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:id="@+id/recycler_view_images"
+            android:padding="5dp"
+            app:reverseLayout="true"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            >
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+
+
+

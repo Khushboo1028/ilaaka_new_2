@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_grad_borders"
+    android:gravity="center">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/slider_5"
+        android:layout_marginVertical="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guest check-in and checkout notifications."
+        android:textSize="25dp"
+        android:textColor="@color/white"
+        android:layout_marginHorizontal="20dp"
+        android:gravity="center"
+        android:fontFamily="@font/avnxt_demi"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Easily manage visitors check-in and checkout and get notifications when they come in and go."
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="30dp"
+        android:gravity="center"
+        android:fontFamily="@font/avnxt_demi"/>
+
+</LinearLayout>

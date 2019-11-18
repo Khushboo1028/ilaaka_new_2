@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="?android:attr/selectableItemBackground">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="July, 2019"
+        android:textSize="18dp"
+        android:textColor="@color/gDark"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/avnxt_demi"
+        android:id="@+id/month_text"
+        />
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Approved Transactions:"
+    android:textSize="12dp"
+    android:layout_below="@id/month_text"
+    android:textColor="@color/black"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:fontFamily="@font/avnxt_medium"
+    android:id="@+id/approved_text"
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12"
+        android:textSize="12dp"
+        android:layout_below="@id/month_text"
+        android:layout_toRightOf="@id/approved_text"
+        android:textColor="@color/greenSolved"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/avnxt_demi"
+        android:id="@+id/approved_transactions"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pending Transactions:"
+        android:textSize="12dp"
+        android:layout_below="@id/approved_text"
+        android:textColor="@color/black"
+        android:layout_marginBottom="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/avnxt_medium"
+        android:id="@+id/rejected_text"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12"
+        android:textSize="12dp"
+        android:layout_below="@id/approved_text"
+        android:layout_toRightOf="@id/rejected_text"
+        android:textColor="@color/incorrect_red"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/avnxt_demi"
+        android:id="@+id/rejected_transactions"
+        />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_home_checkout"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="24dp"
+        android:id="@+id/image_all_trans_check"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="7dp"
+        android:layout_marginVertical="16dp"
+        android:background="#5A000000"/>
+
+</RelativeLayout>

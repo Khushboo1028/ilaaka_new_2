@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/message_infoo_layout"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:isScrollContainer="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:background="@color/white"
+            android:id="@+id/mainrel">
+
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="18dp"
+        android:padding="4dp"
+        android:clickable="true"
+        android:src="@drawable/back" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/profile"
+        android:layout_below="@id/back">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:id="@+id/user_profile"
+            android:src="@drawable/ic_service_default"
+            android:background="@drawable/circle" />
+
+
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Swapnil Chauhan"
+            android:maxLines="1"
+            android:layout_marginTop="30dp"
+            android:singleLine="true"
+            android:fontFamily="@font/avnxt_demi"
+            android:textColor="@color/gLight"
+            android:textSize="22dp"
+            android:background="@null"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            />
+
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/flat_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_below="@id/user_name"
+            android:text="B - 303"
+            android:fontFamily="@font/avnxt_regular"
+            android:textSize="18dp"
+            android:textColor="#000000"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="7dp"
+            android:background="#85000000" />
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile"
+        android:id="@+id/phone_rel"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/info_background_curve"
+        android:clickable="true"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="16dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_info_call"
+            android:layout_centerVertical="true"
+            android:id="@+id/call_img"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/call_img"
+            android:textSize="18dp"
+            android:fontFamily="@font/avnxt_medium"
+            android:text="+123456789"
+            android:id="@+id/phone_number"
+            android:textColor="@color/gDark"
+            android:layout_marginStart="30dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/call_img"
+            android:layout_below="@id/phone_number"
+            android:textSize="12dp"
+            android:fontFamily="@font/avnxt_medium"
+            android:text="Mobile"
+            android:textColor="@color/black"
+            android:layout_marginStart="30dp"/>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phone_rel"
+        android:id="@+id/email_rel"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/info_background_curve"
+        android:clickable="true"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="16dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_info_email"
+            android:layout_centerVertical="true"
+            android:id="@+id/email_img"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/email_img"
+            android:textSize="18dp"
+            android:fontFamily="@font/avnxt_medium"
+            android:text="hello@world.com"
+            android:id="@+id/email"
+            android:textColor="@color/gDark"
+            android:layout_marginStart="30dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/email_img"
+            android:layout_below="@id/email"
+            android:textSize="12dp"
+            android:fontFamily="@font/avnxt_medium"
+            android:text="Email"
+            android:textColor="@color/black"
+            android:layout_marginStart="30dp"/>
+
+
+    </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>
+
+

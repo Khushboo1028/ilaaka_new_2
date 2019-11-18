@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:id="@+id/relativeLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- A RecyclerView with some commonly used attributes -->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent"
+        android:id="@+id/mainrel"
+        android:background="@color/white">
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_filter"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="16dp"
+            android:id="@+id/filter_icon"/>
+
+
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:id="@+id/back"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/back"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="MMT"
+                android:layout_below="@id/back"
+                android:textColor="@color/gDark"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/avnxt_medium"
+                android:textSize="27dp"
+                android:id="@+id/mmt_text"/>
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:src="@drawable/ic_add_mom"-->
+<!--            android:layout_marginEnd="24dp"-->
+<!--            android:layout_marginTop="18dp"-->
+<!--            android:layout_below="@id/back"-->
+<!--            android:id="@+id/generate_img"/>-->
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/mmt_text"
+            android:layout_margin="7dp"
+            android:background="#70000000"
+            android:id="@+id/view1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_rel"
+            android:orientation="horizontal"
+            android:layout_below="@id/view1"
+            android:paddingVertical="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/edittext_borders_lighter">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search"
+                android:layout_marginStart="5dp"
+                android:layout_gravity="center_vertical"
+                android:padding="4dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Search MMT"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:layout_gravity="center_vertical"
+                android:selectAllOnFocus="true"
+                android:textSize="20dp"
+                android:background="@null"
+                android:padding="5dp"
+                android:fontFamily="@font/avnxt_medium"
+                android:layout_marginHorizontal="8dp"
+                android:id="@+id/search_field"
+                />
+
+
+        </LinearLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/search_rel">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:paddingVertical="16dp"
+            android:id="@+id/rel_pending_dues"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/mmt_grey_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gDark"
+            android:text="Your Pending Maintenance Dues"
+            android:fontFamily="@font/avnxt_demi"
+            android:textSize="16dp"
+            android:layout_marginLeft="16dp"
+            android:id="@+id/pending_mmt_text"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mmt_card"
+            android:layout_below="@id/pending_mmt_text"
+            android:layout_marginTop="24dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/mmt_credit_card"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/avnxt_demi"
+            android:textSize="16dp"
+            android:text=""
+            android:textColor="@color/gDark"
+            android:layout_below="@id/mmt_credit_card"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:id="@+id/amount"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/avnxt_demi"
+            android:textSize="16dp"
+            android:layout_marginRight="16dp"
+            android:text=""
+            android:layout_marginTop="12dp"
+            android:layout_below="@id/mmt_credit_card"
+            android:textColor="@color/incorrect_red"
+            android:id="@+id/due_by"
+            android:layout_alignParentRight="true"
+        />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="30dp"
+            android:fontFamily="@font/avnxt_medium"
+            android:textSize="12dp"
+            android:layout_marginTop="12dp"
+            android:text="Pay Now"
+            android:visibility="gone"
+            android:textColor="@color/greenSolved"
+            android:layout_below="@id/amount"
+            android:background="@color/white"
+            android:layout_marginStart="24dp"
+            android:id="@+id/btn_pay_now"/>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_pending_dues"
+            android:textColor="@color/gDark"
+            android:textSize="16dp"
+            android:fontFamily="@font/avnxt_demi"
+            android:text="Your Transactions"
+            android:id="@+id/tv_transaction"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_pending_dues"
+            android:textColor="@color/greenSolved"
+            android:textSize="16dp"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/avnxt_demi"
+            android:text="View All Transactions"
+            android:id="@+id/view_all_transaction"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/my_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_transaction"
+            android:layout_marginTop="12dp"
+            android:scrollbars="vertical" />
+
+            </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
